@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Multi AI Chat</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="logo">
+                Multi<span>AI</span>
+            </div>
+
+            <div class="header-right">
+                <span id="status">● Online</span>
+            </div>
+
+        </header>
+
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+            <div class="welcome">
+
+                <h1>Ask multiple AIs</h1>
+
+                <p>
+                    Send one question to ChatGPT, Claude,
+                    Gemini and Kimi simultaneously.
+                </p>
+
+            </div>
+
+
+            <!-- AI GRID -->
+
+            <section class="ai-grid">
+
+                <!-- OPENAI -->
+
+                <div class="ai-card">
+
+                    <div class="card-header">
+
+                        <div class="provider">
+                            <div class="provider-icon openai">
+                                O
+                            </div>
+
+                            <div>
+                                <h3>ChatGPT</h3>
+                                <span>OpenAI</span>
+                            </div>
+                        </div>
+
+                        <span class="card-status">
+                            Ready
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="openai-response"
+                        class="response"
+                    >
+                        <div class="empty">
+                            Waiting for your question...
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- CLAUDE -->
+
+                <div class="ai-card">
+
+                    <div class="card-header">
+
+                        <div class="provider">
+
+                            <div class="provider-icon claude">
+                                C
+                            </div>
+
+                            <div>
+                                <h3>Claude</h3>
+                                <span>Anthropic</span>
+                            </div>
+
+                        </div>
+
+                        <span class="card-status">
+                            Ready
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="claude-response"
+                        class="response"
+                    >
+                        <div class="empty">
+                            Waiting for your question...
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- GEMINI -->
+
+                <div class="ai-card">
+
+                    <div class="card-header">
+
+                        <div class="provider">
+
+                            <div class="provider-icon gemini">
+                                G
+                            </div>
+
+                            <div>
+                                <h3>Gemini</h3>
+                                <span>Google</span>
+                            </div>
+
+                        </div>
+
+                        <span class="card-status">
+                            Ready
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="gemini-response"
+                        class="response"
+                    >
+                        <div class="empty">
+                            Waiting for your question...
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- KIMI -->
+
+                <div class="ai-card">
+
+                    <div class="card-header">
+
+                        <div class="provider">
+
+                            <div class="provider-icon kimi">
+                                K
+                            </div>
+
+                            <div>
+                                <h3>Kimi</h3>
+                                <span>Moonshot AI</span>
+                            </div>
+
+                        </div>
+
+                        <span class="card-status">
+                            Ready
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="kimi-response"
+                        class="response"
+                    >
+                        <div class="empty">
+                            Waiting for your question...
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INPUT -->
+
+            <section class="input-section">
+
+                <textarea
+                    id="message"
+                    placeholder="Ask all four AIs anything..."
+                    rows="3"
+                ></textarea>
+
+                <div class="input-bottom">
+
+                    <span class="hint">
+                        Enter to send • Shift + Enter for new line
+                    </span>
+
+                    <button
+                        id="send-button"
+                        onclick="sendMessage()"
+                    >
+                        Send
+                    </button>
+
+                </div>
+
+            </section>
+<section class="final-section">
+
+    <h2>Final Answer</h2>
+
+    <div id="finalAnswer">
+        Ask a question and all 4 AI agents will work together.
+    </div>
+
+</section>
+
+            <!-- SYNTHESIZE -->
+
+            <button
+                id="synthesize-button"
+                class="synthesize"
+                disabled
+            >
+                ✦ Synthesize Answers
+            </button>
+
+            <div
+                id="synthesis"
+                class="synthesis"
+            ></div>
+
+        </main>
+
+    </div>
+
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
